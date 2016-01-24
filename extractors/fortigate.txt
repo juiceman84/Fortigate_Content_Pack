@@ -1132,20 +1132,6 @@
       "converters": [],
       "cursor_strategy": "copy",
       "extractor_config": {
-        "regex_value": "^.*osname=\\\"([\\w]+)\\\"\\s+"
-      },
-      "extractor_type": "regex",
-      "order": 0,
-      "source_field": "message",
-      "target_field": "osname",
-      "title": "FGTosname"
-    },
-    {
-      "condition_type": "none",
-      "condition_value": "",
-      "converters": [],
-      "cursor_strategy": "copy",
-      "extractor_config": {
         "regex_value": "^.*mastersrcmac=((?:[A-Fa-f\\d]{2}:){5}[A-Fa-f\\d]{2})\\s+"
       },
       "extractor_type": "regex",
@@ -1380,6 +1366,20 @@
       "source_field": "message",
       "target_field": "fazlograte",
       "title": "FGTfazlograte"
+    },
+    {
+      "condition_type": "none",
+      "condition_value": "",
+      "converters": [],
+      "cursor_strategy": "copy",
+      "extractor_config": {
+        "regex_value": "^.*osname=\\\"([\\w\\s]+)\\\"\\s+"
+      },
+      "extractor_type": "regex",
+      "order": 0,
+      "source_field": "message",
+      "target_field": "osname",
+      "title": "FGTosname"
     }
   ],
   "version": "1.3.2 (e7c49b6)"
